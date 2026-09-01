@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEATHEN — Vintage Fashion & Vinyl</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Special+Elite&family=IBM+Plex+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FDF6E3;
+  --cream2:#FFF8E7;
+  --paper:#F5EFE0;
+  --black:#0F0F0F;
+  --brown:#3E2723;
+  --brown2:#5D4037;
+  --brown3:#8D6E63;
+  --red:#C1272D;
+  --red2:#8B1A1A;
+  --gold:#C9A86A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);
+  color:var(--black);
+  font-family:'Cormorant Garamond',serif;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;
+}
+a{color:inherit}
+.top-bar{
+  background:var(--black);color:var(--cream);
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.3em;
+  display:flex;justify-content:space-between;align-items:center;padding:7px 24px;
+}
+.marquee{
+  background:var(--red);color:var(--cream);
+  font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.25em;
+  overflow:hidden;white-space:nowrap;border-top:1px solid var(--black);border-bottom:1px solid var(--black);
+}
+.marquee-track{display:inline-block;animation:marquee 22s linear infinite;padding:6px 0}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 40px;border-bottom:2.5px solid var(--black);background:var(--cream2);
+  position:sticky;top:0;z-index:50;
+}
+.logo{font-family:'Playfair Display',serif;font-weight:900;font-size:38px;letter-spacing:0.08em;line-height:1;cursor:pointer}
+.logo small{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.4em;font-weight:400;margin-top:2px;color:var(--red)}
+.nav-links{display:flex;gap:22px;align-items:center;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0.12em}
+.nav-links a{color:var(--black);text-decoration:none;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--red);transition:0.3s}
+.nav-links a:hover::after{width:100%}
+.cart-btn,.wish-btn{
+  border:1.5px solid var(--black);padding:6px 14px;background:var(--black);color:var(--cream) !important;cursor:pointer;
+  font-family:'Bebas Neue',sans-serif;letter-spacing:0.1em;
+}
+.wish-btn{background:transparent;color:var(--black) !important;border:1.5px solid var(--black)}
+.wish-btn.has{color:var(--red) !important;border-color:var(--red)}
+.cart-btn::after,.wish-btn::after{display:none}
+.hero{
+  display:grid;grid-template-columns:1.15fr 0.85fr;min-height:78vh;border-bottom:3px solid var(--black);
+}
+.hero-left{padding:54px 48px 42px 48px;border-right:3px solid var(--black);background:var(--paper);position:relative;overflow:hidden}
+.hero-left::after{content:"HEATHEN";position:absolute;right:-10px;bottom:-18px;font-family:'Bebas Neue',sans-serif;font-size:180px;line-height:0.8;color:var(--black);opacity:0.04;pointer-events:none}
+.eyebrow{font-family:'Special Elite',cursive;color:var(--red);font-size:14px;letter-spacing:0.15em;margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:84px;line-height:0.85;letter-spacing:-0.02em}
+.hero h1 i{font-weight:400;color:var(--red)}
+.hero h1 .outline{-webkit-text-stroke:1.5px var(--black);color:transparent}
+.hero p{margin-top:18px;font-size:18px;line-height:1.5;max-width:520px;color:#3a2a1f}
+.hero-cta{margin-top:28px;display:flex;gap:14px;align-items:center}
+.btn-primary{background:var(--red);color:var(--cream);border:1.5px solid var(--black);font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:0.15em;padding:12px 26px;cursor:pointer;box-shadow:4px 4px 0 var(--black);transition:0.15s}
+.btn-primary:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--black)}
+.btn-primary:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:4px 4px 0 var(--black)}
+.btn-ghost{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;background:transparent;border:none;border-bottom:1.5px solid var(--black);padding-bottom:4px;cursor:pointer}
+.hero-right{background:var(--black);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;position:relative;overflow:hidden}
+.hero-right::before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,248,231,0.12);pointer-events:none}
+.turntable{width:380px;height:380px;position:relative;display:flex;align-items:center;justify-content:center}
+.vinyl-hero{width:360px;height:360px;border-radius:50%;background:radial-gradient(circle at center, #FDF6E3 0 8%, #1a1a1a 8.5% 9.5%, transparent 10% ),repeating-radial-gradient(circle at center, #111 0 2px, #222 3px, #0a0a0a 5px);border:6px solid #1a1a1a;box-shadow:0 20px 60px rgba(0,0,0,0.6), inset 0 0 30px rgba(0,0,0,0.9);display:flex;align-items:center;justify-content:center;animation:spin 8s linear infinite;position:relative}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vinyl-label{width:130px;height:130px;border-radius:50%;background:var(--red);border:4px solid var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 0 6px var(--black)}
+.vinyl-label span:first-child{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.15em;color:var(--cream);line-height:1}
+.vinyl-label span:last-child{font-family:'Special Elite',cursive;font-size:10px;letter-spacing:0.18em;color:var(--cream);margin-top:4px}
+.tonearm{position:absolute;top:10px;right:18px;width:140px;height:140px;transform-origin:90% 12%;z-index:5;cursor:grab;transition:transform 0.6s cubic-bezier(0.2,0.8,0.2,1), filter 0.2s;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.4))}
+.tonearm:active{cursor:grabbing}
+.tonearm.off{transform:rotate(42deg)}
+.tonearm.on{transform:rotate(16deg)}
+.tonearm::before{content:"";position:absolute;top:8px;right:8px;width:26px;height:26px;background:radial-gradient(circle at 30% 30%, #eee, #a0a0a0 60%, #666);border:2px solid #222;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.5)}
+.tonearm::after{content:"";position:absolute;top:20px;right:18px;width:6px;height:110px;background:linear-gradient(to bottom,#e8e8e8,#999 55%, #666);border:1px solid #333;transform:rotate(-18deg);transform-origin:top center;border-radius:3px}
+.tonearm::after{box-shadow:0 2px 6px rgba(0,0,0,0.3)}
+.tonearm-tip{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:10px;height:14px;background:linear-gradient(to bottom,#222,#000);border:1px solid #c0c0c0;border-radius:2px}
+.tonearm-hint{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.15em;color:rgba(253,246,227,0.55);white-space:nowrap;pointer-events:none;opacity:0;transition:0.2s}
+.turntable:hover .tonearm-hint, .stage-left:hover .tonearm-hint{opacity:1}
+.hero-stats{margin-top:18px;display:flex;gap:24px;color:var(--cream);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.2em;opacity:0.7}
+
+/* libraries — record covers with pop-out garment */
+.libraries{background:var(--paper);border-bottom:3px solid var(--black);padding:0}
+.libraries-header{padding:44px 48px 22px 48px;display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1.5px solid var(--black);background:var(--cream2);flex-wrap:wrap}
+.libraries-header h2{font-family:'Bebas Neue',sans-serif;font-size:54px;letter-spacing:0.06em;line-height:0.9}
+.libraries-header h2 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;color:var(--red);letter-spacing:0}
+.libraries-header p{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;line-height:1.6;max-width:380px;color:var(--brown2);text-align:right}
+.libraries-tabs{display:flex;gap:0;padding:0 48px;background:var(--brown);border-bottom:2px solid var(--black);overflow-x:auto;scrollbar-width:none}
+.libraries-tabs::-webkit-scrollbar{display:none}
+.libraries-tabs button{background:var(--paper);border:1.5px solid var(--black);border-bottom:none;margin-top:10px;margin-right:6px;padding:10px 18px;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:0.14em;cursor:pointer;position:relative;top:2px;color:var(--brown);white-space:nowrap;transition:0.2s}
+.libraries-tabs button.active{background:var(--paper);color:var(--black);padding-top:14px;margin-top:6px;border-bottom:2px solid var(--paper)}
+.libraries-tabs button.active{background:var(--cream);border-bottom-color:var(--cream)}
+.libraries-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px 28px;padding:42px 48px 56px 48px;background:var(--cream)}
+.library-item{position:relative;height:400px;cursor:pointer;user-select:none;margin-bottom:12px}
+.library-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:transform 0.45s cubic-bezier(0.2,0.8,0.2,1), filter 0.3s;z-index:0}
+.library-inner img{width:92%;height:92%;object-fit:cover;border:1.5px solid var(--black);box-shadow:0 8px 24px rgba(0,0,0,0.25);filter:sepia(0.12) contrast(1.05);border-radius:50%}
+.library-item:hover .library-inner{transform:translateY(-42px) translateX(12px) rotate(1.5deg);filter:brightness(1.05)}
+.library-item:hover .library-sleeve{transform:translateY(6px) rotate(-0.6deg);box-shadow:8px 12px 0 rgba(0,0,0,0.35)}
+.library-sleeve{position:absolute;bottom:0;left:0;width:100%;height:78%;background:var(--black);border:2px solid var(--black);overflow:hidden;z-index:1;transition:transform 0.35s, box-shadow 0.35s;box-shadow:4px 6px 0 rgba(0,0,0,0.4);display:flex;flex-direction:column}
+.library-sleeve-top{height:72%;position:relative;overflow:hidden;background:var(--brown2)}
+.library-sleeve-top img{width:100%;height:100%;object-fit:cover;opacity:0.95;filter:contrast(1.05) saturate(0.9)}
+.library-sleeve-top::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 40px rgba(0,0,0,0.25)}
+.library-sleeve-label{flex:1;background:var(--cream2);padding:10px 12px;display:flex;flex-direction:column;justify-content:center;border-top:1.5px solid var(--black)}
+.library-sleeve-label h3{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.08em;line-height:1}
+.library-sleeve-label p{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;color:var(--brown2);margin-top:3px}
+.library-badge{position:absolute;top:8px;right:8px;background:var(--red);color:var(--cream);font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:0.1em;padding:3px 7px;border:1px solid var(--black);z-index:2}
+.library-wish{position:absolute;top:8px;left:8px;width:28px;height:28px;border-radius:50%;background:var(--cream);border:1.5px solid var(--black);display:flex;align-items:center;justify-content:center;z-index:2;cursor:pointer;font-size:14px}
+.library-wish.active{background:var(--red);color:var(--cream);border-color:var(--red)}
+.library-spine{position:absolute;left:0;top:0;bottom:22%;width:10px;background:linear-gradient(to right, #1a1a1a, #3E2723);border-right:1px solid rgba(255,255,255,0.08);writing-mode:vertical-rl;text-orientation:mixed;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:8px;letter-spacing:0.2em;color:rgba(253,246,227,0.7);padding:6px 0}
+@media(max-width:980px){.libraries-grid{grid-template-columns:repeat(2,1fr)} .libraries-header p{text-align:left}}
+@media(max-width:600px){.libraries-grid{grid-template-columns:1fr;padding:18px} .library-item{height:340px}}
+/* crate */
+.crate-section{background:var(--cream);border-bottom:3px solid var(--black);padding:0}
+.crate-header{display:flex;justify-content:space-between;align-items:end;padding:36px 48px 18px 48px;border-bottom:1.5px solid var(--black);background:var(--cream2)}
+.crate-header h2{font-family:'Bebas Neue',sans-serif;font-size:54px;letter-spacing:0.06em;line-height:0.9}
+.crate-header h2 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;letter-spacing:0;color:var(--red)}
+.crate-header p{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;line-height:1.6;max-width:360px;text-align:right;color:var(--brown2)}
+.divider-tabs{display:flex;gap:0;padding:0 48px;background:var(--brown);border-bottom:2px solid var(--black);overflow-x:auto;scrollbar-width:none}
+.divider-tabs::-webkit-scrollbar{display:none}
+.divider-tabs button{background:var(--paper);border:1.5px solid var(--black);border-bottom:none;margin-top:10px;margin-right:6px;padding:10px 18px;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:0.14em;cursor:pointer;position:relative;top:2px;color:var(--brown);white-space:nowrap;transition:0.2s}
+.divider-tabs button.active{background:var(--cream);color:var(--black);padding-top:14px;margin-top:6px;border-bottom:2px solid var(--cream)}
+.search-wrap{display:flex;align-items:center;gap:12px;padding:14px 48px;border-bottom:1.5px solid var(--black);background:var(--cream);flex-wrap:wrap}
+.search-wrap label{font-family:'Special Elite',cursive;font-size:13px;letter-spacing:0.1em}
+.search-wrap input{flex:1;max-width:420px;background:var(--paper);border:1.5px solid var(--black);padding:10px 14px 10px 36px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.06em;outline:none}
+.search-field{position:relative;flex:1;max-width:420px;min-width:220px}
+.search-field::before{content:"♪";position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px}
+.search-hint{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--brown3);display:flex;gap:14px;align-items:center}
+.search-hint kbd{border:1.5px solid var(--black);background:var(--paper);padding:2px 6px;font-family:'IBM Plex Mono',monospace;font-size:10px}
+.sort-select{border:1.5px solid var(--black);background:var(--paper);padding:9px 12px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;cursor:pointer}
+.crate-viewport{background:linear-gradient(to bottom, #3E2723 0, #2a1a12 100%);padding:28px 0 34px 0;position:relative;overflow:hidden}
+.crate-viewport::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg, rgba(0,0,0,0.15) 0 2px, transparent 2px 40px);pointer-events:none}
+.crate-label{text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.35em;color:rgba(253,246,227,0.55);margin-bottom:18px}
+.crate{display:flex;gap:18px;padding:10px 48px 18px 48px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;cursor:grab}
+.crate:active{cursor:grabbing}
+.crate::-webkit-scrollbar{display:none}
+.record{flex:0 0 220px;position:relative;height:300px;display:flex;align-items:end;user-select:none}
+.sleeve{width:220px;height:220px;background:var(--paper);border:1.5px solid var(--black);box-shadow:4px 6px 0 rgba(0,0,0,0.4);position:absolute;bottom:0;left:0;z-index:1;overflow:hidden;display:flex;flex-direction:column;transition:0.3s}
+.sleeve img{width:100%;height:150px;object-fit:cover;filter:sepia(0.18) contrast(1.05);border-bottom:1.5px solid var(--black)}
+.sleeve-info{padding:10px 12px;background:var(--paper);flex:1}
+.sleeve-info h3{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:0.08em;line-height:1}
+.sleeve-info p{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;color:var(--brown2);margin-top:3px}
+.price-tag{position:absolute;top:8px;right:8px;background:var(--red);color:var(--cream);font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:0.1em;padding:3px 7px;border:1px solid var(--black);z-index:2}
+.wish-heart{position:absolute;top:8px;left:8px;width:28px;height:28px;border-radius:50%;background:var(--cream);border:1.5px solid var(--black);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;font-size:14px;transition:0.2s}
+.wish-heart.active{background:var(--red);color:var(--cream);border-color:var(--red)}
+.vinyl{width:205px;height:205px;border-radius:50%;position:absolute;bottom:8px;left:12px;background:radial-gradient(circle at center, var(--cream) 0 7%, #111 7.5% 8.5%, transparent 9%),repeating-radial-gradient(circle at center, #0f0f0f 0 2px, #1e1e1e 3px, #0a0a0a 5px);border:3px solid #111;display:flex;align-items:center;justify-content:center;transition:0.45s cubic-bezier(0.2,0.8,0.2,1);z-index:0;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+.vinyl::after{content:"";position:absolute;inset:18px;border-radius:50%;border:1px solid rgba(255,255,255,0.06)}
+.vinyl-center{width:62px;height:62px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:2px solid rgba(15,15,15,0.9);box-shadow:0 0 0 3px var(--cream)}
+.vinyl-center small{font-family:'Bebas Neue',sans-serif;font-size:9px;letter-spacing:0.14em;line-height:1}
+.vinyl-center strong{font-family:'Playfair Display',serif;font-size:11px;font-weight:900;letter-spacing:0.05em;line-height:1}
+.record:hover .vinyl{transform:translateX(58px) rotate(18deg)}
+.record.active .vinyl{transform:translateX(78px) rotate(32deg)}
+.record.active .sleeve{transform:translateX(-6px) rotate(-1deg);box-shadow:8px 10px 0 rgba(0,0,0,0.5)}
+.record.active .vinyl{animation:slowSpin 6s linear infinite}
+@keyframes slowSpin{to{transform:translateX(78px) rotate(392deg)}}
+.crate-nav{display:flex;justify-content:center;gap:12px;margin-top:10px}
+.crate-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(253,246,227,0.3);background:rgba(253,246,227,0.08);color:var(--cream);cursor:pointer;font-size:18px;backdrop-filter:blur(4px);transition:0.2s}
+.crate-nav button:hover{background:var(--cream);color:var(--black);border-color:var(--cream)}
+.drag-hint{text-align:center;font-family:'Special Elite',cursive;color:rgba(253,246,227,0.45);font-size:12px;letter-spacing:0.12em;margin-top:10px}
+
+/* detail stage */
+.detail-stage{display:grid;grid-template-columns:480px 1fr;border-bottom:3px solid var(--black);min-height:520px;background:var(--paper)}
+.stage-left{background:var(--black);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px;border-right:3px solid var(--black);position:relative}
+.stage-left h4{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.3em;color:rgba(253,246,227,0.6);margin-bottom:16px}
+.player-vinyl{width:320px;height:320px;border-radius:50%;background:radial-gradient(circle at center, var(--cream) 0 7%, #111 7.5% 8.8%, transparent 9.2%),repeating-radial-gradient(circle at center, #0f0f0f 0 2px, #1c1c1c 3px, #0a0a0a 6px);border:5px solid #111;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 50px rgba(0,0,0,0.7), inset 0 0 24px rgba(0,0,0,0.9);animation:spin 4s linear infinite;animation-play-state:paused}
+.player-vinyl.playing{animation-play-state:running}
+.player-label{width:118px;height:118px;border-radius:50%;border:3px solid var(--cream);box-shadow:0 0 0 5px var(--black);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px}
+.player-label strong{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:0.1em;line-height:1;color:var(--cream)}
+.player-label span{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;color:var(--cream);margin-top:4px}
+.player-controls{margin-top:20px;display:flex;gap:10px;align-items:center}
+.player-controls button{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(253,246,227,0.25);background:transparent;color:var(--cream);cursor:pointer;font-size:14px}
+.player-controls button.primary{background:var(--red);border-color:var(--red);width:52px;height:52px}
+.stage-right{padding:38px 44px;display:flex;flex-direction:column}
+.stage-right .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--red);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.stage-right .meta i{font-style:normal;color:var(--brown3)}
+.stage-right h2{font-family:'Playfair Display',serif;font-size:48px;line-height:0.95;font-weight:900;margin-top:10px}
+.stage-right h2 em{font-weight:400;font-style:italic;color:var(--red)}
+.stage-right .desc{margin-top:14px;font-size:17px;line-height:1.6;color:#3a2a1f;max-width:560px}
+.specs{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px}
+.spec{border:1.5px solid var(--black);padding:12px 14px;background:var(--cream2)}
+.spec label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--brown3)}
+.spec p{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:0.08em;margin-top:2px}
+.sizes{margin-top:18px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.sizes span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:var(--brown2)}
+.sizes button{min-width:42px;padding:8px 10px;border:1.5px solid var(--black);background:var(--cream2);font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.1em;cursor:pointer;transition:0.15s}
+.sizes button.active{background:var(--black);color:var(--cream)}
+.sizes button.oos{opacity:0.35;cursor:not-allowed;text-decoration:line-through}
+.stage-actions{margin-top:22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.price-big{font-family:'Playfair Display',serif;font-size:36px;font-weight:900}
+.price-big small{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;color:var(--brown3);font-weight:400}
+
+/* SHOP ALL */
+.shop-all{background:var(--cream);border-bottom:3px solid var(--black)}
+.shop-all-header{padding:36px 48px 20px 48px;display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:3px solid var(--black);background:var(--paper);flex-wrap:wrap}
+.shop-all-header h2{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:0.06em;line-height:0.9}
+.shop-all-header h2 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;color:var(--red);letter-spacing:0}
+.shop-all-header p{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;line-height:1.6;max-width:420px;color:var(--brown2)}
+.conveyor-viewport{background:var(--black);padding:22px 0 18px 0;overflow:hidden;position:relative;border-bottom:3px solid var(--black)}
+.conveyor-label{display:flex;justify-content:space-between;align-items:center;padding:0 48px;margin-bottom:12px;color:rgba(253,246,227,0.6);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.25em}
+.conveyor-label button{background:transparent;border:1px solid rgba(253,246,227,0.25);color:var(--cream);font-family:'Bebas Neue',sans-serif;letter-spacing:0.15em;padding:4px 10px;cursor:pointer}
+.conveyor{overflow:hidden;position:relative}
+.conveyor-track{display:flex;gap:18px;width:max-content;animation:conveyorScroll 55s linear infinite}
+.conveyor:hover .conveyor-track{animation-play-state:paused}
+@keyframes conveyorScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.conveyor .record{flex:0 0 200px;height:270px}
+.conveyor .sleeve{width:200px;height:200px}
+.conveyor .sleeve img{height:135px}
+.conveyor .vinyl{width:185px;height:185px;bottom:6px}
+.shop-controls{display:flex;gap:12px;align-items:center;padding:16px 48px;background:var(--cream2);border-bottom:1.5px solid var(--black);flex-wrap:wrap}
+.shop-controls .count{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:var(--brown3)}
+.shop-grid{padding:24px 48px 30px 48px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;background:var(--cream)}
+.shop-card{border:1.5px solid var(--black);background:var(--paper);overflow:hidden;box-shadow:4px 4px 0 var(--black);display:flex;flex-direction:column;transition:0.2s;cursor:pointer}
+.shop-card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--black)}
+.shop-card-img{position:relative;height:260px;overflow:hidden;border-bottom:1.5px solid var(--black);background:var(--cream2)}
+.shop-card-img img{width:100%;height:100%;object-fit:cover;filter:sepia(0.12) contrast(1.05);transition:0.4s}
+.shop-card:hover img{transform:scale(1.04)}
+.shop-card-badge{position:absolute;top:8px;left:8px;background:var(--black);color:var(--cream);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;padding:4px 7px;border:1px solid var(--black)}
+.shop-card-price{position:absolute;top:8px;right:8px;background:var(--red);color:var(--cream);font-family:'Bebas Neue',sans-serif;font-size:13px;padding:3px 8px;border:1px solid var(--black)}
+.shop-card-heart{position:absolute;bottom:8px;right:8px;width:30px;height:30px;border-radius:50%;background:var(--cream);border:1.5px solid var(--black);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
+.shop-card-heart.active{background:var(--red);color:var(--cream);border-color:var(--red)}
+.shop-card-body{padding:12px 14px;background:var(--paper);flex:1;display:flex;flex-direction:column}
+.shop-card-body h3{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0.06em;line-height:1}
+.shop-card-body p{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--brown2);margin-top:4px}
+.shop-card-body .card-meta{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.shop-card-body .card-meta span{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;border:1px solid var(--black);padding:2px 6px;background:var(--cream2)}
+.load-more-wrap{text-align:center;padding:0 48px 32px 48px;background:var(--cream)}
+.load-more-wrap button{border:1.5px solid var(--black);background:var(--paper);font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:0.15em;padding:12px 24px;cursor:pointer;box-shadow:4px 4px 0 var(--black)}
+.lookbook{padding:36px 48px 44px 48px;background:var(--cream)}
+.lookbook h2{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:0.08em;display:flex;align-items:center;gap:16px}
+.lookbook h2::after{content:"";flex:1;height:1.5px;background:var(--black)}
+.look-grid{margin-top:20px;display:grid;grid-template-columns:1.2fr 0.8fr 0.9fr;gap:16px}
+.look-card{border:1.5px solid var(--black);background:var(--paper);overflow:hidden;box-shadow:4px 4px 0 var(--black)}
+.look-card img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(0.1) contrast(1.05)}
+.look-card.large{grid-row:span 2;height:520px}
+.look-card.small{height:252px}
+.look-card figcaption{padding:10px 14px;display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid var(--black);background:var(--cream2)}
+.look-card figcaption strong{font-family:'Bebas Neue',sans-serif;letter-spacing:0.08em}
+.look-card figcaption span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--red)}
+footer{background:var(--black);color:var(--cream);padding:36px 48px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;border-top:3px solid var(--black)}
+footer h4{font-family:'Bebas Neue',sans-serif;letter-spacing:0.14em;font-size:18px;margin-bottom:12px;color:var(--gold)}
+footer p, footer a{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.8;color:rgba(253,246,227,0.75);text-decoration:none}
+.footer-logo{font-family:'Playfair Display',serif;font-weight:900;font-size:42px;letter-spacing:0.08em;line-height:1}
+.footer-logo em{color:var(--red);font-style:italic;font-weight:400}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--black);color:var(--cream);border:1.5px solid var(--gold);padding:12px 20px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;display:flex;align-items:center;gap:10px;box-shadow:6px 6px 0 rgba(0,0,0,0.4);transition:0.45s cubic-bezier(0.2,0.8,0.2,1);z-index:200}
+.toast.show{transform:translateX(-50%) translateY(0)}
+/* cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(15,15,15,0.55);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:0.3s;z-index:80}
+.overlay.show{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;width:420px;max-width:92vw;height:100vh;background:var(--paper);border-left:3px solid var(--black);z-index:90;transform:translateX(100%);transition:0.4s cubic-bezier(0.2,0.8,0.2,1);display:flex;flex-direction:column}
+.cart-drawer.open{transform:translateX(0)}
+.cart-head{padding:20px 22px;border-bottom:2px solid var(--black);display:flex;justify-content:space-between;align-items:center;background:var(--cream2)}
+.cart-head h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.1em}
+.cart-head button{width:34px;height:34px;border:1.5px solid var(--black);background:var(--cream);cursor:pointer;font-size:16px}
+.cart-items{flex:1;overflow-y:auto;padding:16px 16px;display:flex;flex-direction:column;gap:12px}
+.cart-item{display:grid;grid-template-columns:86px 1fr;gap:12px;border:1.5px solid var(--black);background:var(--cream2);padding:10px}
+.cart-item img{width:86px;height:86px;object-fit:cover;border:1px solid var(--black);filter:sepia(0.1)}
+.cart-item h4{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.07em;line-height:1}
+.cart-item p{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--brown2)}
+.qty-row{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty-row button{width:26px;height:26px;border:1.5px solid var(--black);background:var(--paper);cursor:pointer;font-family:'Bebas Neue',sans-serif}
+.qty-row span{font-family:'IBM Plex Mono',monospace;font-size:12px;min-width:18px;text-align:center}
+.remove-link{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--red);cursor:pointer;border-bottom:1px solid var(--red);margin-left:auto}
+.cart-foot{border-top:2px solid var(--black);padding:16px 22px;background:var(--cream2)}
+.cart-foot-row{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;margin-bottom:6px}
+.cart-foot-total{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:1.5px solid var(--black);font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.08em}
+.checkout-form{display:none;padding:16px 22px;border-top:2px solid var(--black);background:var(--paper)}
+.checkout-form.show{display:block}
+.checkout-form h4{font-family:'Bebas Neue',sans-serif;letter-spacing:0.1em;margin-bottom:10px}
+.checkout-form input{width:100%;border:1.5px solid var(--black);background:var(--cream2);padding:10px 12px;font-family:'IBM Plex Mono',monospace;font-size:12px;margin-bottom:8px;outline:none}
+.checkout-form .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.wish-panel{position:fixed;top:74px;right:20px;width:320px;max-width:90vw;background:var(--paper);border:2px solid var(--black);box-shadow:6px 6px 0 var(--black);z-index:60;padding:14px;display:none}
+.wish-panel.show{display:block}
+.wish-panel h4{font-family:'Bebas Neue',sans-serif;letter-spacing:0.1em;margin-bottom:8px}
+.wish-item{display:flex;gap:10px;align-items:center;border:1px solid var(--black);background:var(--cream2);padding:8px;margin-bottom:8px}
+.wish-item img{width:48px;height:48px;object-fit:cover;border:1px solid var(--black)}
+@media(max-width:1100px){.shop-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .hero-left{border-right:none;border-bottom:3px solid var(--black)}
+  .hero h1{font-size:62px}
+  .turntable{width:320px;height:320px}
+  .vinyl-hero{width:300px;height:300px}
+  .detail-stage{grid-template-columns:1fr}
+  .stage-left{border-right:none;border-bottom:3px solid var(--black)}
+  .look-grid{grid-template-columns:1fr 1fr}
+  .look-card.large{grid-row:span 1;height:320px}
+  .shop-grid{grid-template-columns:repeat(2,1fr)}
+  footer{grid-template-columns:1fr}
+}
+/* product page — vinyl scroll transition */
+.product-overlay{position:fixed;inset:0;background:rgba(15,15,15,0.78);backdrop-filter:blur(6px);z-index:85;opacity:0;pointer-events:none;transition:opacity 0.35s}
+.product-overlay.show{opacity:1;pointer-events:auto}
+.record-scroll-bar{position:fixed;top:50%;left:0;right:0;height:180px;transform:translateY(-50%) scaleY(0);background:linear-gradient(to bottom,#1a1a1a,#2a1a12);border-top:3px solid var(--black);border-bottom:3px solid var(--black);z-index:86;display:flex;align-items:center;overflow:hidden;pointer-events:none;transition:transform 0.5s cubic-bezier(0.2,0.8,0.2,1)}
+.record-scroll-bar.active{transform:translateY(-50%) scaleY(1)}
+.record-scroll-track{display:flex;gap:16px;animation:recordScroll 1.2s linear infinite}
+@keyframes recordScroll{0%{transform:translateX(0)}100%{transform:translateX(-33.33%)}}
+.mini-vinyl{width:140px;height:140px;flex:0 0 140px;border-radius:50%;background:radial-gradient(circle at center, var(--cream) 0 7%, #111 7.5% 8.5%, transparent 9%),repeating-radial-gradient(circle at center, #0f0f0f 0 2px, #1a1a1a 3px, #0a0a0a 5px);border:3px solid #111;display:flex;align-items:center;justify-content:center;animation:spin 1s linear infinite}
+.mini-label{width:48px;height:48px;border-radius:50%;background:var(--red);border:2px solid var(--cream);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:10px;color:var(--cream)}
+.product-page{position:fixed;inset:0;z-index:87;background:var(--paper);overflow-y:auto;transform:translateY(40px) scale(0.98);opacity:0;pointer-events:none;transition:transform 0.55s cubic-bezier(0.2,0.8,0.2,1), opacity 0.35s; display:flex;flex-direction:column}
+.product-page.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+.product-page-top{position:sticky;top:0;z-index:2;background:var(--black);color:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:12px 32px;border-bottom:2px solid var(--black)}
+.product-page-top span{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.25em}
+.product-page-close{width:40px;height:40px;border:1.5px solid var(--cream);background:transparent;color:var(--cream);cursor:pointer;font-size:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:0.2s}
+.product-page-close:hover{background:var(--cream);color:var(--black)}
+.product-page-body{display:grid;grid-template-columns:1.05fr 0.95fr;flex:1;min-height:0}
+.product-page-left{background:var(--black);padding:36px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;position:relative;overflow:hidden;border-right:3px solid var(--black)}
+.product-page-left::before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,248,231,0.1);pointer-events:none}
+.pp-vinyl-wrap{position:relative;width:360px;height:360px;display:flex;align-items:center;justify-content:center}
+.pp-vinyl{width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at center, var(--cream) 0 7%, #111 7.5% 8.8%, transparent 9.2%),repeating-radial-gradient(circle at center, #0f0f0f 0 2px, #1c1c1c 3px, #0a0a0a 6px);border:5px solid #111;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(0,0,0,0.7);animation:spin 4s linear infinite;animation-play-state:paused}
+.pp-vinyl.playing{animation-play-state:running}
+.pp-label{width:126px;height:126px;border-radius:50%;border:3px solid var(--cream);box-shadow:0 0 0 5px var(--black);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px}
+.pp-label strong{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:0.1em;line-height:1;color:var(--cream)}
+.pp-label span{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;color:var(--cream);margin-top:4px}
+.pp-image{position:absolute;top:50%;left:50%;width:242px;height:242px;border:none;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.55);opacity:0;transition:opacity 0.3s;transform:translate(-50%,-50%);z-index:2; display:flex;align-items:center;justify-content:center;background:var(--paper);border-radius:50%}
+.pp-image.show{opacity:1}
+.pp-image.spinning{animation:ppSpin 4s linear infinite}
+@keyframes ppSpin{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.pp-image img{width:100%;height:100%;object-fit:cover;filter:sepia(0.05) contrast(1.05);display:block}
+.product-page-right{padding:36px 40px;overflow-y:auto;background:var(--cream)}
+.pp-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;color:var(--red);display:flex;gap:10px;flex-wrap:wrap}
+.pp-title{font-family:'Playfair Display',serif;font-size:46px;line-height:0.9;font-weight:900;margin-top:10px}
+.pp-title em{font-style:italic;font-weight:400;color:var(--red)}
+.pp-price{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;margin-top:12px}
+.pp-price small{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:var(--brown3);font-weight:400}
+.pp-desc{margin-top:14px;font-size:17px;line-height:1.65;color:#2b1b12}
+.pp-liner{margin-top:18px;background:var(--paper);border:1.5px solid var(--black);padding:14px 16px;position:relative}
+.pp-liner::before{content:"LINER NOTES —";font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:0.15em;color:var(--red)}
+.pp-liner p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;line-height:1.6;margin-top:6px;color:#3a2a1f}
+.pp-specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.pp-spec{border:1.5px solid var(--black);background:var(--cream2);padding:12px 14px}
+.pp-spec label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--brown3)}
+.pp-spec p{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:0.07em;margin-top:3px}
+.pp-sizes{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.pp-sizes span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em}
+.pp-sizes button{min-width:44px;padding:9px 10px;border:1.5px solid var(--black);background:var(--cream2);font-family:'Bebas Neue',sans-serif;font-size:14px;cursor:pointer}
+.pp-sizes button.active{background:var(--black);color:var(--cream)}
+.pp-qty{display:flex;align-items:center;gap:10px;margin-top:16px}
+.pp-qty button{width:36px;height:36px;border:1.5px solid var(--black);background:var(--paper);cursor:pointer;font-size:16px;font-family:'Bebas Neue',sans-serif}
+.pp-actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.pp-link{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:var(--brown3);cursor:pointer;border-bottom:1px solid var(--brown3);margin-top:10px;display:inline-block}
+@media(max-width:900px){.product-page-body{grid-template-columns:1fr} .product-page-left{border-right:none;border-bottom:3px solid var(--black)} .pp-vinyl-wrap{width:300px;height:300px} .pp-vinyl{width:280px;height:280px}}
+@media(max-width:600px){
+  nav{padding:14px 18px;gap:10px;flex-wrap:wrap}
+  .nav-links{gap:10px;font-size:14px}
+  .crate-header,.shop-all-header{padding:20px 18px;flex-direction:column;align-items:start;gap:10px}
+  .crate-header p,.shop-all-header p{text-align:left}
+  .divider-tabs{padding:0 18px}
+  .search-wrap,.shop-controls{padding:12px 18px}
+  .crate{padding:10px 18px}
+  .conveyor-label{padding:0 18px}
+  .shop-grid{padding:16px 18px;grid-template-columns:1fr}
+  .hero-left{padding:28px 18px}
+  .lookbook{padding:24px 18px}
+  footer{padding:24px 18px}
+  .cart-drawer{width:100vw}
+}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <span>★ EST. 1974 — LONDON & PARIS</span>
+  <span>HEATHEN RECORDS & APPAREL CO.</span>
+  <span>45 RPM • VOLUME 08</span>
+</div>
+<div class="marquee"><div class="marquee-track">&nbsp; HEATHEN — WEAR THE MUSIC — CUT FROM THE SAME CLOTH — RAW DENIM / WORN LEATHER / FADED COTTON — SINCE 1974 — &nbsp; HEATHEN — WEAR THE MUSIC — CUT FROM THE SAME CLOTH — RAW DENIM / WORN LEATHER / FADED COTTON — SINCE 1974 — &nbsp; HEATHEN — WEAR THE MUSIC — CUT FROM THE SAME CLOTH — RAW DENIM / WORN LEATHER / FADED COTTON — SINCE 1974 —</div></div>
+
+<nav>
+  <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">HEATHEN<small>RECORDS & APPAREL — EST. 1974</small></div>
+  <div class="nav-links">
+    <a href="#crate">CRATE</a>
+    <a href="#shopAll">SHOP ALL</a>
+    <a href="#libraries">LIBRARIES</a>
+    <a href="#stage">NOW SPINNING</a>
+    <a href="#look">LOOKBOOK</a>
+    <button class="wish-btn" id="wishBtn">♡ WISHLIST (<span id="wishCount">0</span>)</button>
+    <button class="cart-btn" id="cartBtn">CART (<span id="cartCount">0</span>)</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">— VOL. VIII — THE WINTER PRESSING</div>
+    <h1>WEAR<br><i>THE</i> <span class="outline">MUSIC</span><br>HEATHEN</h1>
+    <p>Clothes pressed like records — heavy, warm, and made to fade beautifully. Dig through our crate. Each piece is a track, each collection an album.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="document.getElementById('crate').scrollIntoView({behavior:'smooth'})">DIG THE CRATE →</button>
+      <button class="btn-ghost" onclick="document.getElementById('shopAll').scrollIntoView({behavior:'smooth'})">SHOP ALL — ENDLESS</button>
+    </div>
+    <div style="margin-top:28px;display:flex;gap:18px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--brown3)">
+      <span>◆ 180gsm COTTON</span><span>◆ JAPANESE DENIM</span><span>◆ VEGETABLE LEATHER</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="turntable" id="heroTurntable">
+      <div class="vinyl-hero" id="heroVinyl"><div class="vinyl-label"><span>HEATHEN</span><span>45 RPM • STEREO</span></div></div>
+      <div class="tonearm off" id="heroTonearm" title="Click or drag to drop needle"><div class="tonearm-tip"></div><span class="tonearm-hint">CLICK TO DROP NEEDLE</span></div>
+    </div>
+    <div class="hero-stats"><span>◉ LIVE FROM STUDIO 3B</span><span>—</span><span>EST. 1974</span> <span id="heroNeedleState" style="color:var(--gold)">● NEEDLE UP</span></div>
+  </div>
+</section>
+
+<section class="crate-section" id="crate">
+  <div class="crate-header">
+    <h2>DIG THE <em>CRATE</em></h2>
+    <p>Slide through the stack like a record store. Hover to pull the vinyl, click to spin it.</p>
+  </div>
+  <div class="divider-tabs" id="tabs">
+    <button class="active" data-filter="all">ALL SECTIONS</button>
+    <button data-filter="outerwear">OUTERWEAR</button>
+    <button data-filter="denim">DENIM</button>
+    <button data-filter="knit">KNIT</button>
+    <button data-filter="shirts">SHIRTS</button>
+    <button data-filter="accessories">ACCESSORIES</button>
+  </div>
+  <div class="search-wrap">
+    <label for="search">SEARCH THE STACK —</label>
+    <div class="search-field"><input id="search" placeholder="Try 'raw denim', 'leather', 'cream bomber'..." autocomplete="off"></div>
+    <select id="sortCrate" class="sort-select"><option value="default">SORT: FEATURED</option><option value="price-asc">PRICE: LOW → HIGH</option><option value="price-desc">PRICE: HIGH → LOW</option><option value="year-desc">NEWEST PRESSING</option><option value="name">NAME A—Z</option></select>
+    <div class="search-hint"><span><kbd>←</kbd> <kbd>→</kbd> SCROLL</span><span>✦ DRAG TO DIG</span></div>
+  </div>
+  <div class="crate-viewport">
+    <div class="crate-label">— PULL A SLEEVE TO LISTEN — 33⅓ RPM — HEATHEN PRESSING —</div>
+    <div class="crate" id="crateEl"></div>
+    <div class="crate-nav"><button id="prevBtn">‹</button><button id="nextBtn">›</button></div>
+    <div class="drag-hint">drag • scroll • click a record to put it on the player</div>
+  </div>
+</section>
+
+<!-- SHOP ALL ENDLESS -->
+<section class="shop-all" id="shopAll">
+  <div class="shop-all-header">
+    <h2>SHOP ALL — <em>ENDLESS</em></h2>
+    <p>An infinite row of records — but every sleeve is clothing. The conveyor never ends. Hover to pause, click to spin. Below: full catalog grid with endless scroll.</p>
+  </div>
+  <div class="conveyor-viewport">
+    <div class="conveyor-label"><span>◉ ENDLESS TRACK — 45 RPM — AUTO-SCROLLING</span><button id="toggleConveyor">⏸ PAUSE</button></div>
+    <div class="conveyor" id="conveyor"><div class="conveyor-track" id="conveyorTrack"></div></div>
+  </div>
+  <div class="shop-controls">
+    <span class="count" id="shopCount">—</span>
+    <select id="shopFilter" class="sort-select">
+      <option value="all">ALL SECTIONS</option><option value="outerwear">OUTERWEAR</option><option value="denim">DENIM</option><option value="knit">KNIT</option><option value="shirts">SHIRTS</option><option value="accessories">ACCESSORIES</option>
+    </select>
+    <select id="shopSort" class="sort-select">
+      <option value="default">SORT: FEATURED</option><option value="price-asc">PRICE: LOW → HIGH</option><option value="price-desc">PRICE: HIGH → LOW</option><option value="year-desc">NEWEST</option><option value="name">NAME A—Z</option>
+    </select>
+    <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em">SEARCH:</span>
+      <input id="shopSearch" placeholder="filter shop all..." style="border:1.5px solid var(--black);background:var(--paper);padding:8px 12px;font-family:'IBM Plex Mono',monospace;font-size:12px;min-width:200px;outline:none">
+    </div>
+  </div>
+  <div class="shop-grid" id="shopGrid"></div>
+  <div class="load-more-wrap"><button id="loadMore">LOAD MORE TRACKS — 8 MORE ↓</button></div>
+</section>
+
+<section class="detail-stage" id="stage">
+  <div class="stage-left">
+    <h4>NOW SPINNING — STEREO 45</h4>
+    <div style="position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center">
+      <div class="player-vinyl" id="playerVinyl"><div class="player-label" id="playerLabel" style="background:var(--red)"><strong id="pTitle">SELECT A<br>RECORD</strong><span id="pSub">HEATHEN • 1974</span></div></div>
+      <div class="tonearm off" id="stageTonearm" style="top:-12px;right:-22px" title="Click or drag to drop needle"><div class="tonearm-tip"></div><span class="tonearm-hint">CLICK TO DROP NEEDLE</span></div>
+    </div>
+    <div class="player-controls"><button id="playBtn">▶</button><button class="primary" id="spinBtn">⟳</button><button id="stopBtn">■</button><button id="needleBtn" style="border:1.5px solid rgba(253,246,227,0.35);background:transparent;color:var(--cream);padding:6px 14px;font-family:'Bebas Neue',sans-serif;letter-spacing:0.12em;cursor:pointer;border-radius:999px;font-size:12px">♪ NEEDLE OFF</button></div>
+    <div style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;color:rgba(253,246,227,0.5)" id="stageNeedleHint">NEEDLE UP — CLICK ARM TO PLAY</div>
+  </div>
+  <div class="stage-right">
+    <div class="meta"><span id="dCat">— SELECT A RECORD —</span> <i>•</i> <span id="dYear">1974 PRESSING</span> <i>•</i> <span id="dStock">IN STOCK</span></div>
+    <h2 id="dTitle">Pull a record<br><em>from the crate</em></h2>
+    <p class="desc" id="dDesc">Each Heathen piece is cut and pressed like a record. Hover the crate above, pull a sleeve, and drop it on the player.</p>
+    <div class="specs">
+      <div class="spec"><label>FABRIC</label><p id="dFabric">—</p></div>
+      <div class="spec"><label>FIT / CUT</label><p id="dFit">—</p></div>
+      <div class="spec"><label>COLORWAY</label><p id="dColor">—</p></div>
+      <div class="spec"><label>TRACK NO.</label><p id="dTrack">— / 24</p></div>
+    </div>
+    <div class="sizes" id="sizes"><span>SIZE —</span>
+      <button data-size="XS">XS</button><button data-size="S">S</button><button class="active" data-size="M">M</button><button data-size="L">L</button><button data-size="XL">XL</button>
+    </div>
+    <div class="stage-actions">
+      <div class="price-big" id="dPrice">$ —<small> incl. dust sleeve</small></div>
+      <div style="margin-left:auto;display:flex;gap:10px">
+        <button class="btn-ghost" id="wishAddBtn" style="border:1.5px solid var(--black);padding:10px 16px;background:var(--cream2)">♡ WISHLIST</button>
+        <button class="btn-primary" id="addBtn">ADD TO CART — ♪</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="libraries" id="libraries">
+  <div class="libraries-header">
+    <h2>LIBRARIES — <em>COVERS</em></h2>
+    <p>Records as wardrobes. Each cover is a collection. Hover — the garment slides out like a poly-lined inner sleeve. Click to spin it.</p>
+  </div>
+  <div class="libraries-tabs" id="libTabs">
+    <button class="active" data-lib="all">ALL COVERS</button>
+    <button data-lib="outerwear">OUTERWEAR</button>
+    <button data-lib="denim">DENIM</button>
+    <button data-lib="knit">KNIT</button>
+    <button data-lib="shirts">SHIRTS</button>
+    <button data-lib="accessories">ACCESSORIES</button>
+  </div>
+  <div class="libraries-grid" id="librariesGrid"></div>
+</section>
+
+<section class="lookbook" id="look">
+  <h2>LOOKBOOK — <span style="font-family:'Playfair Display',serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:0">Vol. VIII Winter</span></h2>
+  <div class="look-grid">
+    <figure class="look-card large"><img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=800&q=80&auto=format&fit=crop" alt=""><figcaption><strong>TRACK 01 — THE BROWN BOMBER</strong><span>SHOP →</span></figcaption></figure>
+    <figure class="look-card small"><img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=600&q=80&auto=format&fit=crop" alt=""><figcaption><strong>DENIM ON DENIM</strong><span>1974</span></figcaption></figure>
+    <figure class="look-card small"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80&auto=format&fit=crop" alt=""><figcaption><strong>CREAM KNIT</strong><span>45 RPM</span></figcaption></figure>
+    <figure class="look-card small"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&q=80&auto=format&fit=crop" alt=""><figcaption><strong>LEATHER EDIT</strong><span>STEREO</span></figcaption></figure>
+    <figure class="look-card small"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80&auto=format&fit=crop" alt=""><figcaption><strong>RECORD STORE DAY</strong><span>HEATHEN</span></figcaption></figure>
+  </div>
+</section>
+
+<footer>
+  <div><div class="footer-logo">HEATHEN<em>.</em></div><p style="margin-top:10px;max-width:420px">A fashion house that thinks like a record label. We press collections, not seasons. Every garment is mastered for longevity.</p><p style="margin-top:14px;opacity:0.5">© 1974—2026 HEATHEN RECORDS & APPAREL. MADE TO FADE.</p></div>
+  <div><h4>VISIT THE STORE</h4><p>48 Berwick St, Soho<br>London W1F 8SJ<br><br>Mon—Sat 11—19h<br>Sun 12—17h<br><br><a href="#">hello@heathen.store</a></p></div>
+  <div><h4>FOLLOW THE GROOVE</h4><p><a href="#">Instagram — @heathen.store</a><br><a href="#">Journal / Liner Notes</a><br><a href="#">Shipping & Returns</a><br><a href="#">Size Guide</a><br><br>Set in Playfair & Bebas. Printed on cream stock.</p></div>
+</footer>
+
+<div class="wish-panel" id="wishPanel"><h4>♡ WISHLIST</h4><div id="wishList"></div><button class="btn-ghost" style="margin-top:8px;width:100%;text-align:center" onclick="document.getElementById('wishPanel').classList.remove('show')">CLOSE</button></div>
+<div class="product-overlay" id="productOverlay"></div>
+<div class="record-scroll-bar" id="recordScrollBar"><div class="record-scroll-track" id="recordScrollTrack"></div></div>
+<div class="product-page" id="productPage" role="dialog" aria-modal="true">
+  <div class="product-page-top">
+    <span>HEATHEN — NOW PLAYING • 45 RPM • VOLUME VIII</span>
+    <button class="product-page-close" id="productClose" aria-label="Close">✕</button>
+  </div>
+  <div class="product-page-body">
+    <div class="product-page-left">
+      <div class="pp-vinyl-wrap">
+        <div class="pp-vinyl" id="ppVinyl"><div class="pp-label" id="ppLabel" style="background:var(--red)"><strong id="ppLabelTitle">HEATHEN</strong><span id="ppLabelSub">TRACK 01</span></div></div>
+        <div class="pp-image" id="ppImageWrap"><img id="ppImage" src="" alt=""></div>
+        <div class="tonearm off" id="ppTonearm" style="top:-10px;right:-18px"><div class="tonearm-tip"></div><span class="tonearm-hint">DROP NEEDLE</span></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <button class="product-page-close" id="ppPlayBtn" style="width:auto;padding:8px 18px;border-radius:999px;font-family:'Bebas Neue',sans-serif;letter-spacing:0.12em;font-size:13px">▶ PLAY</button>
+        <button id="ppSpinToMid" style="background:transparent;border:1px solid rgba(255,248,231,0.3);color:var(--cream);padding:8px 14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;cursor:pointer">SPIN ON MID DECK →</button>
+      </div>
+    </div>
+    <div class="product-page-right">
+      <div class="pp-meta" id="ppMeta"></div>
+      <h2 class="pp-title" id="ppTitle"></h2>
+      <div class="pp-price" id="ppPrice"></div>
+      <p class="pp-desc" id="ppDesc"></p>
+      <div class="pp-liner" id="ppLiner"><p id="ppLinerText"></p></div>
+      <div class="pp-specs" id="ppSpecs"></div>
+      <div class="pp-sizes" id="ppSizes"></div>
+      <div class="pp-qty"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em">QTY —</span><button id="ppQtyMinus">−</button><span id="ppQty" style="min-width:28px;text-align:center;font-family:'IBM Plex Mono',monospace">1</span><button id="ppQtyPlus">+</button><span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;opacity:0.6" id="ppStock"></span></div>
+      <div class="pp-actions">
+        <button class="btn-primary" id="ppAddBtn" style="flex:1">ADD TO CRATE — ♪</button>
+        <button class="btn-ghost" id="ppWishBtn" style="border:1.5px solid var(--black);padding:12px 18px;background:var(--cream2)">♡ WISHLIST</button>
+      </div>
+      <span class="pp-link" id="ppMidLink">↗ Keep the Mid Section? It's still spinning down below — jump to Now Spinning</span>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head"><h3>YOUR CRATE — <span id="drawerCount">0</span></h3><button id="closeCart">✕</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot" id="cartFoot">
+    <div class="cart-foot-row"><span>SUBTOTAL</span><span id="subTotal">$0</span></div>
+    <div class="cart-foot-row"><span>SHIPPING</span><span>CALCULATED AT CHECKOUT</span></div>
+    <div class="cart-foot-total"><span>TOTAL</span><span id="cartTotal">$0</span></div>
+    <button class="btn-primary" style="width:100%;margin-top:14px" id="checkoutBtn">CHECKOUT — ♪</button>
+    <button class="btn-ghost" style="width:100%;text-align:center;margin-top:10px;border:none" onclick="clearCart()">CLEAR CRATE</button>
+  </div>
+  <div class="checkout-form" id="checkoutForm">
+    <h4>SHIPPING & PAYMENT — 45 RPM</h4>
+    <input id="cName" placeholder="Full name">
+    <input id="cEmail" placeholder="Email address" type="email">
+    <input id="cAddress" placeholder="Shipping address">
+    <div class="row"><input id="cZip" placeholder="Postcode"><input id="cCity" placeholder="City"></div>
+    <input id="cCard" placeholder="Card number — 4242 4242 4242 4242">
+    <div class="row"><input id="cExp" placeholder="MM/YY"><input id="cCvc" placeholder="CVC"></div>
+    <button class="btn-primary" style="width:100%;margin-top:10px" id="placeOrderBtn">PLACE ORDER — $ <span id="placeTotal">0</span></button>
+    <button class="btn-ghost" style="width:100%;text-align:center;margin-top:8px;border:none" id="backToCart">← BACK TO CRATE</button>
+  </div>
+</div>
+<div class="toast" id="toast">♪ Added to cart</div>
+
+<script>
+const records = [
+  {id:1, title:"THE RAVEN BOMBER", cat:"outerwear", price:420, color:"#C1272D", fabric:"Waxed Cotton • Quilted Lining", fit:"Oversized • Drop Shoulder", colorway:"OXBLOOD / CREAM", track:"01", year:1977, img:"https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80&auto=format&fit=crop", desc:"Pressed like a first pressing — waxed cotton that crackles at the elbow, quilted tube-amp warmth inside. The bomber our founder wore to the studio every winter since '77.", liner:"Cut for the cold walk home after last call. The wax blooms with rain; the quilting hums like valves warming up. First chorus: oversized. Second chorus: yours forever.", stock:"In Stock", sizes:["XS","S","M","L","XL"]},
+  {id:2, title:"RAW HEM DENIM", cat:"denim", price:285, color:"#3E2723", fabric:"13oz Japanese Selvedge • Kaihara", fit:"Straight Cut • Mid Rise", colorway:"INDIGO / BROWN STITCH", track:"02", year:1975, img:"https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80&auto=format&fit=crop", desc:"Unwashed, uncompromising. Kaihara selvedge, slow-loomed. Copper rivets tick like a hi-hat, selvedge coin pocket is the hidden groove.", liner:"Wear daily for six months before first wash — your fades are the remix. Every crease a needle drop. No two pairs ever sound the same.", stock:"In Stock", sizes:["S","M","L","XL"]},
+  {id:3, title:"CREAM FISHERMAN KNIT", cat:"knit", price:195, color:"#D7CCC8", fabric:"100% Wool • Aran Cable", fit:"Relaxed • Heavyweight", colorway:"CREAM / OAT", track:"03", year:1974, img:"https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80&auto=format&fit=crop", desc:"A harbour studio at dawn. Dense Aran cables trap air like grooves trap sound — warm, slightly itchy, completely honest.", liner:"Knit on 1940s Cotton's machines in Donegal. The yarn smells faintly of lanolin and dust sleeves. Roll the cuffs, let it slouch — it's meant to look lived-in on first wear.", stock:"Low Stock", sizes:["M","L","XL"]},
+  {id:4, title:"TOBACCO LEATHER OVERSHIRT", cat:"outerwear", price:550, color:"#8D6E63", fabric:"Vegetable-Tanned Leather • Unlined", fit:"Boxy • Wide Sleeve", colorway:"TOBACCO BROWN", track:"04", year:1979, img:"https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=600&q=80&auto=format&fit=crop", desc:"Full-grain, pit-tanned 14 days. No filter — pockets deepen, elbows soften, color blooms from tobacco to burnt sugar.", liner:"A record jacket you wear. The leather opens up like a gatefold after three spins. Store it hanging — it will memorize your shoulders.", stock:"In Stock", sizes:["S","M","L"]},
+  {id:5, title:"HEATHEN STRIPE SHIRT", cat:"shirts", price:125, color:"#5D4037", fabric:"Washed Cotton Poplin", fit:"Regular • 70s Collar", colorway:"CREAM / BROWN STRIPE", track:"05", year:1976, img:"https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80&auto=format&fit=crop", desc:"The store uniform since '76. Soft poplin, wide collar, chain-stitched hem that curls like tape ends.", liner:"B-side versatility: tucked into Raw Hem, open over the Red Label Tee, knotted at the waist. Radio-friendly from the first wear.", stock:"In Stock", sizes:["XS","S","M","L","XL"]},
+  {id:6, title:"CORDUROY CRATE CAP", cat:"accessories", price:65, color:"#C9A86A", fabric:"Cotton Corduroy • 8W", fit:"One Size", colorway:"BROWN / CREAM EMBROIDERY", track:"06", year:1981, img:"https://images.unsplash.com/photo-1529391409740-59e019cea269?w=600&q=80&auto=format&fit=crop", desc:"Five-panel crate divider for your head. 8-wale cord, soft bill, Heathen crest chain-stitched like a label logo.", liner:"Corduroy that lightens where the sun hits it. The brim breaks in after a week — perfect for digging in the bins.", stock:"In Stock", sizes:["One Size"]},
+  {id:7, title:"WIDE WALE TROUSER", cat:"denim", price:165, color:"#4E342E", fabric:"Cotton Corduroy • 8W", fit:"Wide • Double Pleat", colorway:"CHOCOLATE BROWN", track:"07", year:1978, img:"https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80&auto=format&fit=crop", desc:"Wide wale, wider possibilities. High waisted, deep pleat — moves like a 33⅓ with extra headroom.", liner:"The trouser DJs reach for. Pairs with the Fisherman Knit (Track 03) for a full B-side. Turn-ups show the tape selvedge.", stock:"In Stock", sizes:["S","M","L"]},
+  {id:8, title:"RED LABEL TEE", cat:"shirts", price:55, color:"#B71C1C", fabric:"Heavyweight 240gsm Cotton", fit:"Boxy • Short Sleeve", colorway:"WASHED BLACK / RED PRINT", track:"08", year:1974, img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80&auto=format&fit=crop", desc:"Our 45 single. Heavyweight, garment-dyed, cracked Heathen label print — the tee you grab without looking.", liner:"Two washes to get the crack right. The cotton is loop-wheeled so it gets softer, not thinner. Buy two — one to fade, one pristine.", stock:"In Stock", sizes:["XS","S","M","L","XL"]},
+  {id:9, title:"MOHAIR CARDIGAN", cat:"knit", price:240, color:"#A67C52", fabric:"Mohair • Wool • Nylon Blend", fit:"Oversized • Ribbed Trim", colorway:"CAMEL / CREAM", track:"09", year:1980, img:"https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80&auto=format&fit=crop", desc:"Fuzzy as a needle on dust. Italian mohair, brushed until it glows — big horn buttons, deeper pockets.", liner:"For listening rooms and cold studios. The haze is intentional — like analogue hiss, it makes everything warmer.", stock:"Low Stock", sizes:["S","M","L","XL"]},
+  {id:10, title:"CANVAS TOTE — CRATE DIGGER", cat:"accessories", price:45, color:"#FDF6E3", fabric:"18oz Canvas • Webbed Handles", fit:"One Size", colorway:"CREAM / BLACK PRINT", track:"10", year:1982, img:"https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&q=80&auto=format&fit=crop", desc:"Holds 30 records or a week's fits. Screen-printed crate diagram. Handles that patina like a fretboard.", liner:"The gig bag. Wax it if you want water resistance — or let it stain, that's provenance.", stock:"In Stock", sizes:["One Size"]},
+  {id:11, title:"SUEDE DESERT BOOT", cat:"accessories", price:195, color:"#6D4C41", fabric:"Suede • Crepe Sole", fit:"Regular", colorway:"SAND / GUM", track:"11", year:1976, img:"https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80&auto=format&fit=crop", desc:"Rebuilt for crate digging — soft reverse suede, crepe that goes quiet on wax floors. No eyelet squeak.", liner:"The boot that lets you stand for hours in the bins. Crepe molds to your gait — first 10 wears are the break-in solo.", stock:"In Stock", sizes:["S","M","L"]},
+  {id:12, title:"HEAVY FLANNEL OVERSHIRT", cat:"shirts", price:145, color:"#8B4513", fabric:"Brushed Flannel • Double Cloth", fit:"Oversized • Drop Front", colorway:"BROWN / RED CHECK", track:"12", year:1978, img:"https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80&auto=format&fit=crop", desc:"Double-cloth flannel, brushed until it hums. Two chest pockets, the shirt you live in October to April.", liner:"Heathen's winter 45. Feels like putting the needle down on a warm room. Wash cold, hang dry — keeps the hum.", stock:"In Stock", sizes:["M","L","XL"]},
+  {id:13, title:"BLACK DENIM JACKET", cat:"outerwear", price:295, color:"#212121", fabric:"14oz Black Selvedge • Sulfur Dyed", fit:"Cropped • Boxy", colorway:"FADED BLACK", track:"13", year:1975, img:"https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=600&q=80&auto=format&fit=crop", desc:"Black selvedge that fades to charcoal — every wear is a play count. Copper buttons, hidden inner pocket for a pick.", liner:"Sulfur over indigo — it fades warm, not blue. Like a record left in the sun, beautifully imperfect.", stock:"In Stock", sizes:["XS","S","M","L"]},
+  {id:14, title:"WAFFLE THERMAL HENLEY", cat:"knit", price:85, color:"#EFEBE9", fabric:"Waffle Cotton • Wooden Buttons", fit:"Slim • Long Sleeve", colorway:"CREAM / BROWN BUTTONS", track:"14", year:1979, img:"https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=600&q=80&auto=format&fit=crop", desc:"Thermal waffle, maple buttons — the first layer that matters when the studio heating is off.", liner:"Waffle traps air like grooves trap sound. Layer under the Tobacco Overshirt for a full frequency response.", stock:"In Stock", sizes:["XS","S","M","L","XL"]},
+  {id:15, title:"BROWN LEATHER BELT", cat:"accessories", price:78, color:"#4E342E", fabric:"Full-Grain Leather • Brass", fit:"One Size", colorway:"DARK BROWN", track:"15", year:1980, img:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80&auto=format&fit=crop", desc:"Full grain, solid brass buckle — notches that will eventually outnumber the original five. That's the point.", liner:"Cut from the same hide as the Tobacco Overshirt. Edges burnished by hand — they shine with wear.", stock:"In Stock", sizes:["One Size"]},
+  {id:16, title:"CROPPED WORK JACKET", cat:"outerwear", price:340, color:"#5D4037", fabric:"Cotton Canvas • Triple Stitched", fit:"Boxy • Cropped", colorway:"BROWN / CREAM STITCH", track:"16", year:1982, img:"https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80&auto=format&fit=crop", desc:"French workwear, remastered. Herringbone canvas, bar tacks that don't quit, pockets tuned for tools and 7-inches.", liner:"The engineer’s jacket — every pocket at the right height when you're hunched over a mixing desk.", stock:"Low Stock", sizes:["S","M","L","XL"]},
+  {id:17, title:"INDIGO PATCHWORK SHIRT", cat:"shirts", price:135, color:"#37474F", fabric:"Indigo Dyed Cotton • Sashiko Detail", fit:"Relaxed • Camp Collar", colorway:"INDIGO / CREAM", track:"17", year:1977, img:"https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600&q=80&auto=format&fit=crop", desc:"Boro-inspired patchwork, indigo dipped three times. Each panel a different tone — like a cut-and-paste 12-inch.", liner:"Natural indigo crocks slightly at first — wash alone for the first spin, then it settles into a deep midnight.", stock:"In Stock", sizes:["M","L","XL"]},
+  {id:18, title:"WOOL BEANIE — HEATHEN", cat:"accessories", price:42, color:"#C1272D", fabric:"Wool • Ribbed Knit", fit:"One Size", colorway:"RED / CREAM CUFF", track:"18", year:1983, img:"https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=600&q=80&auto=format&fit=crop", desc:"Ribbed beanie, folded cuff — red like the label label at the centre of every Heathen vinyl.", liner:"Wool from the same mill as the Fisherman Knit. Fits tight first wear, then remembers your head.", stock:"In Stock", sizes:["One Size"]},
+  {id:19, title:"FADED DENIM OVERSHIRT", cat:"denim", price:210, color:"#8D6E63", fabric:"Washed Denim • Chain Stitch", fit:"Oversized • Shirt Jacket", colorway:"WASHED BLUE / BROWN", track:"19", year:1974, img:"https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&q=80&auto=format&fit=crop", desc:"Sun-faded at the seams before you even wear it. Chain-stitched hem run-off — the denim equivalent of run-out groove etchings.", liner:"Stone-washed with river rocks from the Tyne. Soft on day one, better on day 500.", stock:"In Stock", sizes:["S","M","L","XL"]},
+  {id:20, title:"CREAM CARGO PANT", cat:"denim", price:175, color:"#D7CCC8", fabric:"Cotton Ripstop • Tape Detail", fit:"Wide • Mid Rise", colorway:"CREAM / BROWN TAPE", track:"20", year:1981, img:"https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600&q=80&auto=format&fit=crop", desc:"Ripstop cargo, reinforced knees — borrowed from the army, kept by the studio. Cotton tape pulls like bias binding on a sleeve.", liner:"Big pockets, quiet closure. The pant that carries a notebook, a loupe, and a spare stylus.", stock:"In Stock", sizes:["S","M","L"]},
+  {id:21, title:"BRUSHED WOOL COAT", cat:"outerwear", price:620, color:"#3E2723", fabric:"Melton Wool • Wool Blend Lining", fit:"Long • Belted Back", colorway:"BROWN MELANGE", track:"21", year:1978, img:"https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&q=80&auto=format&fit=crop", desc:"Long melton wool — heavy like a record collection you have to move house with. Worth it.", liner:"Cut long so it covers the suit underneath. The belt cinches like a tape reel — wear open, it still hangs straight.", stock:"In Stock", sizes:["S","M","L"]},
+  {id:22, title:"STRIPED BRETON TEE", cat:"shirts", price:68, color:"#FFF8E7", fabric:"Cotton Jersey • Narrow Stripe", fit:"Regular • Boat Neck", colorway:"CREAM / BROWN STRIPE", track:"22", year:1975, img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80&auto=format&fit=crop", desc:"Breton stripe — the song that never leaves the charts. Tight yarn, narrow rib that doesn't curl.", liner:"Inspired by the navy tees in the studio canteen. One stripe slightly thicker — the off-beat, the human touch.", stock:"In Stock", sizes:["XS","S","M","L","XL"]},
+  {id:23, title:"SHEARLING VEST", cat:"outerwear", price:480, color:"#A1887F", fabric:"Shearling • Suede Trim", fit:"Oversized • Open Front", colorway:"CREAM / BROWN", track:"23", year:1980, img:"https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80&auto=format&fit=crop", desc:"Shearling you can wear indoors — the studio staple when the radiators click off at midnight.", liner:"No collar, no fuss — just warmth like a valve amp left on. Suede trim will darken where your hands rest.", stock:"Low Stock", sizes:["M","L"]},
+  {id:24, title:"HEATHEN VINYL SLIPMAT", cat:"accessories", price:28, color:"#0F0F0F", fabric:"Felt • Cork Backed", fit:"One Size", colorway:"BLACK / RED PRINT", track:"24", year:1984, img:"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80&auto=format&fit=crop", desc:"Cork-backed slipmat, Heathen red label. For the player at home — reduces static, shows allegiance.", liner:"Place on platter, drop needle. The cork damps like a good pressing — quieter surface, deeper groove.", stock:"In Stock", sizes:["One Size"]},
+];
+
+let activeFilter='all', activeSearch='', activeSort='default';
+let shopFilter='all', shopSearch='', shopSort='default';
+let activeId=1, selectedSize='M';
+let cart = JSON.parse(localStorage.getItem('heathen_cart')||'[]');
+let wishlist = JSON.parse(localStorage.getItem('heathen_wish')||'[]');
+let shopVisible = 8;
+
+const crateEl=document.getElementById('crateEl');
+const shopGrid=document.getElementById('shopGrid');
+const conveyorTrack=document.getElementById('conveyorTrack');
+
+function sortList(list, mode){
+  const arr=[...list];
+  if(mode==='price-asc') arr.sort((a,b)=>a.price-b.price);
+  else if(mode==='price-desc') arr.sort((a,b)=>b.price-a.price);
+  else if(mode==='year-desc') arr.sort((a,b)=>b.year-a.year);
+  else if(mode==='name') arr.sort((a,b)=>a.title.localeCompare(b.title));
+  return arr;
+}
+function filtered(list, f, q){
+  const qq=q.toLowerCase();
+  return list.filter(r=>{
+    const catOk=f==='all'||r.cat===f;
+    const qOk=!qq||r.title.toLowerCase().includes(qq)||r.desc.toLowerCase().includes(qq)||r.colorway.toLowerCase().includes(qq)||r.fabric.toLowerCase().includes(qq);
+    return catOk&&qOk;
+  });
+}
+
+function recordHTML(r, small=false){
+  const isWish=wishlist.includes(r.id);
+  return `<div class="record ${activeId===r.id?'active':''}" data-id="${r.id}">
+    <div class="vinyl"><div class="vinyl-center" style="background:${r.color};color:${(r.color==='#FDF6E3'||r.color==='#D7CCC8'||r.color==='#EFEBE9'||r.color==='#FFF8E7')?'#0F0F0F':'#FDF6E3'}"><small>HEATHEN</small><strong>${r.track}</strong></div></div>
+    <div class="sleeve"><img src="${r.img}" alt="${r.title}" loading="lazy"><div class="price-tag">$${r.price}</div><button class="wish-heart ${isWish?'active':''}" data-wish="${r.id}" onclick="event.stopPropagation();toggleWish(${r.id})">${isWish?'♥':'♡'}</button><div class="sleeve-info"><h3>${r.title}</h3><p>${r.cat.toUpperCase()} • ${r.year} • ${r.colorway}</p></div></div>
+  </div>`;
+}
+
+function renderCrate(){
+  const list=sortList(filtered(records, activeFilter, activeSearch), activeSort);
+  crateEl.innerHTML='';
+  if(list.length===0){crateEl.innerHTML=`<div style="color:rgba(253,246,227,0.6);font-family:'Special Elite',cursive;padding:40px">No records in this section — try another divider or clear search.</div>`;return;}
+  list.forEach(r=>{
+    const wrap=document.createElement('div');
+    wrap.innerHTML=recordHTML(r);
+    const el=wrap.firstElementChild;
+    el.addEventListener('click',()=>openProductPage(r.id));
+    crateEl.appendChild(el);
+  });
+}
+
+function renderConveyor(){
+  const list=records;
+  const doubled=[...list,...list];
+  conveyorTrack.innerHTML='';
+  doubled.forEach(r=>{
+    const wrap=document.createElement('div');
+    wrap.innerHTML=recordHTML(r,true);
+    const el=wrap.firstElementChild;
+    el.style.cursor='pointer';
+    el.addEventListener('click',()=>openProductPage(r.id));
+    conveyorTrack.appendChild(el);
+  });
+}
+
+function shopCardHTML(r){
+  const isWish=wishlist.includes(r.id);
+  return `<div class="shop-card" data-id="${r.id}">
+    <div class="shop-card-img"><img src="${r.img}" alt="${r.title}" loading="lazy"><span class="shop-card-badge">${r.cat.toUpperCase()} • ${r.year}</span><span class="shop-card-price">$${r.price}</span><button class="shop-card-heart ${isWish?'active':''}" data-wish="${r.id}" onclick="event.stopPropagation();toggleWish(${r.id})">${isWish?'♥':'♡'}</button></div>
+    <div class="shop-card-body"><h3>${r.title}</h3><p>${r.fabric}</p><div class="card-meta"><span>${r.colorway}</span><span>TRACK ${r.track}</span></div></div>
+  </div>`;
+}
+
+function renderShopGrid(){
+  const list=sortList(filtered(records, shopFilter, shopSearch), shopSort);
+  document.getElementById('shopCount').textContent=`${list.length} TRACKS • SHOWING ${Math.min(shopVisible,list.length)}`;
+  const slice=list.slice(0,shopVisible);
+  shopGrid.innerHTML='';
+  if(slice.length===0){shopGrid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:40px;font-family:'Special Elite',cursive">No tracks found — adjust filters or search.</div>`;}
+  else slice.forEach(r=>{
+    const wrap=document.createElement('div');
+    wrap.innerHTML=shopCardHTML(r);
+    const el=wrap.firstElementChild;
+    el.addEventListener('click',()=>openProductPage(r.id));
+    shopGrid.appendChild(el);
+  });
+  document.getElementById('loadMore').style.display = shopVisible >= list.length ? 'none' : 'inline-block';
+  document.getElementById('loadMore').textContent = shopVisible >= list.length ? 'END OF STACK — BACK TO TOP ↑' : `LOAD MORE TRACKS — ${Math.min(8,list.length-shopVisible)} MORE ↓`;
+}
+
+function selectRecord(id){
+  activeId=id;
+  const r=records.find(x=>x.id===id);
+  document.querySelectorAll('.record').forEach(el=>el.classList.toggle('active', Number(el.dataset.id)===id));
+  // also highlight libraries
+  document.querySelectorAll('.library-item').forEach(el=>el.classList.toggle('active', Number(el.dataset.id)===id));
+  document.getElementById('dCat').textContent=r.cat.toUpperCase();
+  document.getElementById('dYear').textContent=r.year+' PRESSING';
+  document.getElementById('dStock').textContent=r.stock.toUpperCase();
+  document.getElementById('dTitle').innerHTML=r.title.replace(' ', '<br><em>')+'</em>';
+  document.getElementById('dDesc').textContent=r.desc;
+  document.getElementById('dFabric').textContent=r.fabric;
+  document.getElementById('dFit').textContent=r.fit;
+  document.getElementById('dColor').textContent=r.colorway;
+  document.getElementById('dTrack').textContent=r.track+' / 24';
+  document.getElementById('dPrice').innerHTML=`$${r.price}<small> incl. dust sleeve</small>`;
+  document.getElementById('pTitle').innerHTML=r.title.split(' ').slice(0,2).join('<br>');
+  document.getElementById('pSub').textContent=r.year+' • '+r.cat.toUpperCase();
+  const label=document.getElementById('playerLabel');
+  label.style.background=r.color;
+  const dark=(r.color==='#FDF6E3'||r.color==='#D7CCC8'||r.color==='#EFEBE9'||r.color==='#FFF8E7');
+  label.style.color=dark?'#0F0F0F':'#FDF6E3';
+  const sizesEl=document.getElementById('sizes');
+  sizesEl.innerHTML='<span>SIZE —</span>';
+  r.sizes.forEach(s=>{
+    const b=document.createElement('button');
+    b.textContent=s; b.dataset.size=s;
+    if(s===selectedSize) b.classList.add('active');
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#sizes button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); selectedSize=s;
+    });
+    sizesEl.appendChild(b);
+  });
+  if(!r.sizes.includes(selectedSize)){ selectedSize=r.sizes[0]; document.querySelectorAll('#sizes button').forEach((x,i)=>{x.classList.toggle('active', i===0)}); }
+  document.getElementById('wishAddBtn').textContent = wishlist.includes(id) ? '♥ IN WISHLIST' : '♡ WISHLIST';
+  document.getElementById('wishAddBtn').onclick = ()=>toggleWish(id);
+  syncVinylSpin();
+}
+function selectAndScrollMid(id){
+  selectRecord(id);
+  document.getElementById('stage').scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+// ===== PRODUCT PAGE — vinyl scroll transition =====
+let ppQty=1, ppSize='M', ppArmOn=false, productPageId=null;
+function setPpArm(on){
+  ppArmOn=on;
+  const arm=document.getElementById('ppTonearm');
+  arm.classList.toggle('on', on); arm.classList.toggle('off', !on);
+  document.getElementById('ppVinyl').classList.toggle('playing', on);
+  const imgWrap=document.getElementById('ppImageWrap');
+  if(on) imgWrap.classList.add('spinning');
+  else imgWrap.classList.remove('spinning');
+  document.getElementById('ppPlayBtn').textContent = on ? '❚❚ PAUSE' : '▶ PLAY';
+  arm.querySelector('.tonearm-hint').textContent = on ? 'LIFT NEEDLE' : 'DROP NEEDLE';
+}
+function buildRecordScrollTrack(){
+  const track=document.getElementById('recordScrollTrack');
+  if(track.children.length>0) return;
+  const seq=[...records,...records,...records];
+  seq.forEach(r=>{
+    const d=document.createElement('div');
+    d.className='mini-vinyl';
+    d.innerHTML=`<div class="mini-label" style="background:${r.color}">${r.track}</div>`;
+    track.appendChild(d);
+  });
+}
+function openProductPage(id){
+  productPageId=id; const r=records.find(x=>x.id===id);
+  // keep mid deck in sync silently
+  selectRecord(id);
+  // prepare scroll bar
+  buildRecordScrollTrack();
+  const bar=document.getElementById('recordScrollBar');
+  const overlay=document.getElementById('productOverlay');
+  const page=document.getElementById('productPage');
+  // animate bar
+  bar.classList.add('active'); overlay.classList.add('show');
+  setTimeout(()=>{
+    // fill product page
+    fillProductPage(r);
+    page.classList.add('open');
+    bar.classList.remove('active');
+  }, 420);
+  document.body.style.overflow='hidden';
+}
+function fillProductPage(r){
+  document.getElementById('ppMeta').innerHTML=`<span>${r.cat.toUpperCase()}</span> <span>•</span> <span>${r.year} PRESSING</span> <span>•</span> <span>TRACK ${r.track} / 24</span> <span>•</span> <span>${r.stock.toUpperCase()}</span>`;
+  document.getElementById('ppTitle').innerHTML=r.title.replace(' ', ' <em>')+'</em>';
+  document.getElementById('ppPrice').innerHTML=`$${r.price}<small> incl. dust sleeve • VAT included</small>`;
+  document.getElementById('ppDesc').textContent=r.desc;
+  document.getElementById('ppLinerText').textContent=r.liner;
+  document.getElementById('ppStock').textContent=r.stock;
+  document.getElementById('ppImage').src=r.img;
+  document.getElementById('ppImageWrap').classList.add('show');
+  const label=document.getElementById('ppLabel');
+  label.style.background=r.color;
+  const dark=(r.color==='#FDF6E3'||r.color==='#FFF8E7'||r.color==='#D7CCC8'||r.color==='#EFEBE9');
+  label.style.color=dark?'#0F0F0F':'#FDF6E3';
+  document.getElementById('ppLabelTitle').textContent=r.title.split(' ')[0];
+  document.getElementById('ppLabelSub').textContent=`TRACK ${r.track} • ${r.year}`;
+  // specs
+  document.getElementById('ppSpecs').innerHTML=`
+    <div class="pp-spec"><label>FABRIC</label><p>${r.fabric}</p></div>
+    <div class="pp-spec"><label>FIT / CUT</label><p>${r.fit}</p></div>
+    <div class="pp-spec"><label>COLORWAY</label><p>${r.colorway}</p></div>
+    <div class="pp-spec"><label>YEAR / PRESS</label><p>${r.year} • ${r.track}/24</p></div>`;
+  // sizes
+  const sizesEl=document.getElementById('ppSizes');
+  sizesEl.innerHTML='<span>SIZE —</span>';
+  ppSize=r.sizes.includes(selectedSize)?selectedSize:r.sizes[0];
+  ppQty=1; document.getElementById('ppQty').textContent=ppQty;
+  r.sizes.forEach(s=>{
+    const b=document.createElement('button'); b.textContent=s;
+    if(s===ppSize) b.classList.add('active');
+    b.addEventListener('click',()=>{
+      sizesEl.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); ppSize=s; selectedSize=s;
+    });
+    sizesEl.appendChild(b);
+  });
+  document.getElementById('ppWishBtn').textContent=wishlist.includes(r.id)?'♥ IN WISHLIST':'♡ WISHLIST';
+  document.getElementById('ppWishBtn').onclick=()=>{ toggleWish(r.id); document.getElementById('ppWishBtn').textContent=wishlist.includes(r.id)?'♥ IN WISHLIST':'♡ WISHLIST'; };
+  setPpArm(false);
+}
+function closeProductPage(){
+  document.getElementById('productPage').classList.remove('open');
+  document.getElementById('productOverlay').classList.remove('show');
+  document.getElementById('recordScrollBar').classList.remove('active');
+  document.body.style.overflow='';
+  setPpArm(false);
+}
+
+// ===== TONEARM — interactive needle =====
+let heroArmOn=false, stageArmOn=false;
+function setHeroArm(on){
+  heroArmOn=on;
+  const arm=document.getElementById('heroTonearm');
+  arm.classList.toggle('on', on); arm.classList.toggle('off', !on);
+  document.getElementById('heroNeedleState').textContent = on ? '● NEEDLE ON — PLAYING' : '● NEEDLE UP';
+  document.getElementById('heroNeedleState').style.color = on ? '#4caf50' : 'var(--gold)';
+  document.getElementById('heroVinyl').style.animationPlayState = on ? 'running' : 'paused';
+  arm.querySelector('.tonearm-hint').textContent = on ? 'CLICK TO LIFT NEEDLE' : 'CLICK TO DROP NEEDLE';
+  if(on) toast('♪ Needle on record — spinning');
+  else toast('Needle lifted — paused');
+}
+function setStageArm(on){
+  stageArmOn=on;
+  const arm=document.getElementById('stageTonearm');
+  arm.classList.toggle('on', on); arm.classList.toggle('off', !on);
+  document.getElementById('stageNeedleHint').textContent = on ? 'NEEDLE ON RECORD — LISTEN WITH EYES ♪' : 'NEEDLE UP — CLICK ARM TO PLAY';
+  document.getElementById('needleBtn').textContent = on ? '♪ NEEDLE ON' : '♪ NEEDLE OFF';
+  document.getElementById('needleBtn').style.background = on ? 'var(--red)' : 'transparent';
+  document.getElementById('needleBtn').style.color = on ? 'var(--cream)' : 'var(--cream)';
+  document.getElementById('needleBtn').style.borderColor = on ? 'var(--red)' : 'rgba(253,246,227,0.35)';
+  arm.querySelector('.tonearm-hint').textContent = on ? 'CLICK TO LIFT' : 'CLICK TO DROP';
+  syncVinylSpin();
+  if(on) toast('♪ Needle dropped — now spinning');
+  else toast('Needle up — record stopped');
+}
+function syncVinylSpin(){
+  const v=document.getElementById('playerVinyl');
+  if(stageArmOn) v.classList.add('playing');
+  else v.classList.remove('playing');
+}
+function makeDraggable(armEl, setter, getter){
+  let dragging=false, startAngle=0;
+  armEl.addEventListener('click', (e)=>{
+    if(dragging) return;
+    setter(!getter());
+  });
+  armEl.addEventListener('mousedown', e=>{ dragging=false; armEl.setPointerCapture && armEl.setPointerCapture(e.pointerId); });
+  // simple drag: horizontal drag toggles
+  let sx=0;
+  armEl.addEventListener('pointerdown', e=>{ sx=e.clientX; dragging=false; armEl.setPointerCapture(e.pointerId); });
+  armEl.addEventListener('pointermove', e=>{
+    if(e.buttons!==1) return;
+    const dx=e.clientX - sx;
+    if(Math.abs(dx)>18){ dragging=true; if(dx>0 && !getter()) setter(true); if(dx<0 && getter()) setter(false); }
+  });
+  armEl.addEventListener('pointerup', ()=> setTimeout(()=>dragging=false, 120));
+}
+
+// ===== LIBRARIES — record covers with pop-out garment =====
+let libFilter='all';
+function coverArtFor(r){
+  // use a duotone / typographic cover inspired by record art, plus garment as inner
+  return r.color;
+}
+function renderLibraries(){
+  const grid=document.getElementById('librariesGrid');
+  const list=filtered(records, libFilter, '');
+  grid.innerHTML='';
+  list.forEach(r=>{
+    const isWish=wishlist.includes(r.id);
+    const div=document.createElement('div');
+    div.className='library-item';
+    div.dataset.id=r.id;
+    div.innerHTML=`
+      <div class="library-inner"><img src="${r.img}" alt="${r.title}"></div>
+      <div class="library-sleeve">
+        <div class="library-sleeve-top" style="background:${r.color}">
+          <img src="${r.img}" alt="" style="mix-blend-mode:multiply;opacity:0.35;filter:grayscale(0.3) contrast(1.2)">
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.12em;color:${(r.color==='#FDF6E3'||r.color==='#FFF8E7'||r.color==='#D7CCC8'||r.color==='#EFEBE9')?'#0F0F0F':'var(--cream)'};line-height:0.9">${r.title}</div>
+            <div style="margin-top:6px;font-family:'Special Elite',cursive;font-size:10px;letter-spacing:0.18em;color:${(r.color==='#FDF6E3'||r.color==='#FFF8E7'||r.color==='#D7CCC8'||r.color==='#EFEBE9')?'#0F0F0F':'var(--cream)'}">${r.year} • ${r.cat.toUpperCase()} • TRACK ${r.track}</div>
+            <div style="margin-top:10px;width:42px;height:42px;border-radius:50%;background:${(r.color==='#FDF6E3'||r.color==='#FFF8E7')?'var(--black)':'var(--cream)'};border:2px solid var(--black);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:10px">${r.track}</div>
+          </div>
+          <div class="library-spine">HEATHEN • ${r.track}</div>
+        </div>
+        <div class="library-sleeve-label"><h3>${r.title}</h3><p>${r.colorway} • $${r.price}</p></div>
+        <div class="library-badge">$${r.price}</div>
+        <button class="library-wish ${isWish?'active':''}" onclick="event.stopPropagation();toggleWish(${r.id})">${isWish?'♥':'♡'}</button>
+      </div>
+    `;
+    div.addEventListener('click', ()=> openProductPage(r.id));
+    grid.appendChild(div);
+  });
+  if(list.length===0) grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;font-family:Special Elite,cursive">No covers in this section.</div>';
+}
+
+// filters
+document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); activeFilter=b.dataset.filter; renderCrate();
+}));
+document.getElementById('search').addEventListener('input',e=>{activeSearch=e.target.value; renderCrate();});
+document.getElementById('sortCrate').addEventListener('change',e=>{activeSort=e.target.value; renderCrate();});
+document.getElementById('shopFilter').addEventListener('change',e=>{shopFilter=e.target.value; shopVisible=8; renderShopGrid();});
+document.getElementById('shopSort').addEventListener('change',e=>{shopSort=e.target.value; renderShopGrid();});
+document.getElementById('shopSearch').addEventListener('input',e=>{shopSearch=e.target.value; shopVisible=8; renderShopGrid();});
+document.getElementById('loadMore').addEventListener('click',()=>{
+  const total=filtered(records, shopFilter, shopSearch).length;
+  if(shopVisible>=total){ window.scrollTo({top:0,behavior:'smooth'}); return; }
+  shopVisible+=8; renderShopGrid();
+});
+// infinite scroll for shop grid
+const shopObserver=new IntersectionObserver(entries=>{
+  entries.forEach(ent=>{
+    if(ent.isIntersecting){
+      const total=filtered(records, shopFilter, shopSearch).length;
+      if(shopVisible<total){ shopVisible+=4; renderShopGrid(); }
+    }
+  });
+},{rootMargin:'400px'});
+shopObserver.observe(document.getElementById('loadMore'));
+
+// crate drag/wheel
+let isDown=false,startX,scrollLeft;
+crateEl.addEventListener('mousedown',e=>{isDown=true; startX=e.pageX-crateEl.offsetLeft; scrollLeft=crateEl.scrollLeft});
+crateEl.addEventListener('mouseleave',()=>isDown=false);
+crateEl.addEventListener('mouseup',()=>isDown=false);
+crateEl.addEventListener('mousemove',e=>{ if(!isDown) return; e.preventDefault(); const x=e.pageX-crateEl.offsetLeft; const walk=(x-startX)*1.4; crateEl.scrollLeft=scrollLeft-walk; });
+crateEl.addEventListener('wheel',e=>{ if(Math.abs(e.deltaX)<Math.abs(e.deltaY)){ e.preventDefault(); crateEl.scrollLeft+=e.deltaY; }},{passive:false});
+document.getElementById('prevBtn').onclick=()=>crateEl.scrollBy({left:-260,behavior:'smooth'});
+document.getElementById('nextBtn').onclick=()=>crateEl.scrollBy({left:260,behavior:'smooth'});
+document.addEventListener('keydown',e=>{ if(e.key==='ArrowLeft') crateEl.scrollBy({left:-260,behavior:'smooth'}); if(e.key==='ArrowRight') crateEl.scrollBy({left:260,behavior:'smooth'});});
+let conveyorPaused=false;
+document.getElementById('toggleConveyor').onclick=function(){
+  conveyorPaused=!conveyorPaused;
+  conveyorTrack.style.animationPlayState=conveyorPaused?'paused':'running';
+  this.textContent=conveyorPaused?'▶ PLAY':'⏸ PAUSE';
+};
+// libraries tabs
+document.querySelectorAll('#libTabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#libTabs button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); libFilter=b.dataset.lib; renderLibraries();
+}));
+
+// wishlist & cart
+function save(){
+  localStorage.setItem('heathen_cart',JSON.stringify(cart));
+  localStorage.setItem('heathen_wish',JSON.stringify(wishlist));
+}
+function updateBadges(){
+  const count=cart.reduce((s,i)=>s+i.qty,0);
+  document.getElementById('cartCount').textContent=count;
+  document.getElementById('drawerCount').textContent=count;
+  document.getElementById('wishCount').textContent=wishlist.length;
+  document.getElementById('wishBtn').classList.toggle('has', wishlist.length>0);
+  renderWishPanel();
+}
+function toggleWish(id){
+  const idx=wishlist.indexOf(id);
+  if(idx>-1) wishlist.splice(idx,1); else wishlist.push(id);
+  save(); updateBadges(); renderCrate(); renderConveyor(); renderShopGrid(); renderLibraries();
+  // update detail btn
+  if(activeId===id) document.getElementById('wishAddBtn').textContent = wishlist.includes(id) ? '♥ IN WISHLIST' : '♡ WISHLIST';
+  toast(wishlist.includes(id) ? '♡ Added to wishlist' : '♡ Removed from wishlist');
+}
+function renderWishPanel(){
+  const el=document.getElementById('wishList');
+  if(wishlist.length===0){ el.innerHTML='<p style="font-family:IBM Plex Mono;font-size:11px;opacity:0.6">No records saved — click ♡ on any sleeve.</p>'; return; }
+  el.innerHTML='';
+  wishlist.forEach(id=>{
+    const r=records.find(x=>x.id===id);
+    const d=document.createElement('div'); d.className='wish-item';
+    d.innerHTML=`<img src="${r.img}"><div style="flex:1"><div style="font-family:Bebas Neue;letter-spacing:0.06em">${r.title}</div><div style="font-family:IBM Plex Mono;font-size:10px">$${r.price}</div></div><button style="border:none;background:var(--black);color:var(--cream);padding:6px 8px;cursor:pointer;font-family:Bebas Neue" onclick="selectRecord(${r.id});document.getElementById('wishPanel').classList.remove('show')">VIEW</button><button style="border:1px solid var(--black);background:transparent;padding:6px 8px;cursor:pointer" onclick="toggleWish(${r.id})">✕</button>`;
+    el.appendChild(d);
+  });
+}
+document.getElementById('wishBtn').onclick=()=>document.getElementById('wishPanel').classList.toggle('show');
+// update wishlist VIEW to use product page
+const _origRenderWish = renderWishPanel;
+renderWishPanel = function(){
+  const el=document.getElementById('wishList');
+  if(wishlist.length===0){ el.innerHTML='<p style="font-family:IBM Plex Mono;font-size:11px;opacity:0.6">No records saved — click ♡ on any sleeve.</p>'; return; }
+  el.innerHTML='';
+  wishlist.forEach(id=>{
+    const r=records.find(x=>x.id===id);
+    const d=document.createElement('div'); d.className='wish-item';
+    d.innerHTML=`<img src="${r.img}"><div style="flex:1"><div style="font-family:Bebas Neue;letter-spacing:0.06em">${r.title}</div><div style="font-family:IBM Plex Mono;font-size:10px">$${r.price}</div></div><button style="border:none;background:var(--black);color:var(--cream);padding:6px 8px;cursor:pointer;font-family:Bebas Neue" onclick="openProductPage(${r.id});document.getElementById('wishPanel').classList.remove('show')">VIEW</button><button style="border:1px solid var(--black);background:transparent;padding:6px 8px;cursor:pointer" onclick="toggleWish(${r.id})">✕</button>`;
+    el.appendChild(d);
+  });
+};
+
+function addToCart(){
+  if(!activeId) return toast('♪ Pull a record first');
+  const r=records.find(x=>x.id===activeId);
+  // validate size
+  if(!r.sizes.includes(selectedSize)) selectedSize=r.sizes[0];
+  const key=activeId+'::'+selectedSize;
+  const existing=cart.find(i=>i.key===key);
+  if(existing) existing.qty+=1;
+  else cart.push({key, id:activeId, size:selectedSize, qty:1, title:r.title, price:r.price, img:r.img});
+  save(); renderCart(); updateBadges(); openCart(); toast(`♪ Added ${r.title} [${selectedSize}] — $${r.price}`);
+}
+function renderCart(){
+  const el=document.getElementById('cartItems');
+  const foot=document.getElementById('cartFoot');
+  if(cart.length===0){
+    el.innerHTML=`<div style="text-align:center;padding:30px 10px;font-family:'Special Elite',cursive;color:var(--brown3)">Your crate is empty.<br>Dig a record and add it.</div>`;
+    document.getElementById('subTotal').textContent='$0';
+    document.getElementById('cartTotal').textContent='$0';
+    document.getElementById('placeTotal').textContent='0';
+    foot.style.display='block';
+    return;
+  }
+  el.innerHTML='';
+  let total=0;
+  cart.forEach((item,idx)=>{
+    total+=item.price*item.qty;
+    const d=document.createElement('div'); d.className='cart-item';
+    d.innerHTML=`<img src="${item.img}"><div><h4>${item.title}</h4><p>SIZE ${item.size} • $${item.price}</p><div class="qty-row"><button onclick="changeQty(${idx},-1)">−</button><span>${item.qty}</span><button onclick="changeQty(${idx},1)">+</button><span class="remove-link" onclick="removeItem(${idx})">REMOVE</span></div></div>`;
+    el.appendChild(d);
+  });
+  document.getElementById('subTotal').textContent='$'+total;
+  document.getElementById('cartTotal').textContent='$'+total;
+  document.getElementById('placeTotal').textContent=total;
+}
+function changeQty(idx,delta){
+  cart[idx].qty+=delta;
+  if(cart[idx].qty<=0) cart.splice(idx,1);
+  save(); renderCart(); updateBadges();
+}
+function removeItem(idx){ cart.splice(idx,1); save(); renderCart(); updateBadges(); toast('Removed from crate'); }
+function clearCart(){ cart=[]; save(); renderCart(); updateBadges(); }
+function openCart(){ document.getElementById('cartDrawer').classList.add('open'); document.getElementById('overlay').classList.add('show'); document.getElementById('checkoutForm').classList.remove('show'); document.getElementById('cartFoot').style.display='block'; document.getElementById('cartItems').style.display='flex'; }
+function closeCart(){ document.getElementById('cartDrawer').classList.remove('open'); document.getElementById('overlay').classList.remove('show'); }
+document.getElementById('cartBtn').onclick=openCart;
+document.getElementById('closeCart').onclick=closeCart;
+document.getElementById('overlay').onclick=()=>{ closeCart(); document.getElementById('wishPanel').classList.remove('show'); };
+document.getElementById('addBtn').onclick=addToCart;
+document.getElementById('checkoutBtn').onclick=()=>{
+  if(cart.length===0) return toast('Crate empty');
+  document.getElementById('checkoutForm').classList.add('show');
+  document.getElementById('cartItems').style.display='none';
+  document.getElementById('cartFoot').style.display='none';
+};
+document.getElementById('backToCart').onclick=()=>{
+  document.getElementById('checkoutForm').classList.remove('show');
+  document.getElementById('cartItems').style.display='flex';
+  document.getElementById('cartFoot').style.display='block';
+};
+document.getElementById('placeOrderBtn').onclick=()=>{
+  const name=document.getElementById('cName').value.trim();
+  const email=document.getElementById('cEmail').value.trim();
+  const addr=document.getElementById('cAddress').value.trim();
+  if(!name||!email||!addr) return toast('Please fill name, email & address');
+  if(!email.includes('@')) return toast('Enter a valid email');
+  const total=cart.reduce((s,i)=>s+i.qty*i.price,0);
+  toast(`✓ Order placed! Total $${total} — confirmation to ${email}`);
+  cart=[]; save(); renderCart(); updateBadges();
+  setTimeout(()=>{ closeCart(); document.getElementById('checkoutForm').classList.remove('show'); document.getElementById('cartItems').style.display='flex'; document.getElementById('cartFoot').style.display='block'; },700);
+  ['cName','cEmail','cAddress','cZip','cCity','cCard','cExp','cCvc'].forEach(id=>document.getElementById(id).value='');
+};
+// player — now tied to needle
+const vinylEl=document.getElementById('playerVinyl');
+document.getElementById('playBtn').onclick=()=>{ if(!stageArmOn) setStageArm(true); else vinylEl.classList.toggle('playing'); };
+document.getElementById('spinBtn').onclick=()=> setStageArm(true);
+document.getElementById('stopBtn').onclick=()=> setStageArm(false);
+document.getElementById('needleBtn').onclick=()=> setStageArm(!stageArmOn);
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2600); }
+
+// product page wiring
+document.getElementById('productClose').onclick=closeProductPage;
+document.getElementById('productOverlay').onclick=closeProductPage;
+document.getElementById('ppTonearm').addEventListener('click',()=> setPpArm(!ppArmOn));
+makeDraggable(document.getElementById('ppTonearm'), setPpArm, ()=>ppArmOn);
+document.getElementById('ppPlayBtn').onclick=()=> setPpArm(!ppArmOn);
+document.getElementById('ppQtyMinus').onclick=()=>{ ppQty=Math.max(1, ppQty-1); document.getElementById('ppQty').textContent=ppQty; };
+document.getElementById('ppQtyPlus').onclick=()=>{ ppQty=Math.min(10, ppQty+1); document.getElementById('ppQty').textContent=ppQty; };
+document.getElementById('ppAddBtn').onclick=()=>{
+  if(!productPageId) return;
+  const r=records.find(x=>x.id===productPageId);
+  const key=productPageId+'::'+ppSize;
+  const existing=cart.find(i=>i.key===key);
+  if(existing) existing.qty+=ppQty; else cart.push({key, id:productPageId, size:ppSize, qty:ppQty, title:r.title, price:r.price, img:r.img});
+  save(); renderCart(); updateBadges(); toast(`♪ Added ${r.title} [${ppSize}] ×${ppQty} — $${r.price*ppQty}`);
+  closeProductPage(); setTimeout(openCart, 300);
+};
+document.getElementById('ppSpinToMid').onclick=()=>{
+  if(!productPageId) return;
+  closeProductPage();
+  setTimeout(()=>{ selectAndScrollMid(productPageId); setStageArm(true); }, 450);
+};
+document.getElementById('ppMidLink').onclick=()=>{
+  closeProductPage();
+  setTimeout(()=> document.getElementById('stage').scrollIntoView({behavior:'smooth'}), 400);
+};
+document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeProductPage(); closeCart(); } });
+
+// init
+renderCrate(); renderConveyor(); renderShopGrid(); renderLibraries(); selectRecord(1); renderCart(); updateBadges();
+setHeroArm(false); setStageArm(false);
+makeDraggable(document.getElementById('heroTonearm'), setHeroArm, ()=>heroArmOn);
+makeDraggable(document.getElementById('stageTonearm'), setStageArm, ()=>stageArmOn);
+// hero vinyl initial paused until needle drop
+document.getElementById('heroVinyl').style.animationPlayState='paused';
+</script>
+</body>
+</html>
